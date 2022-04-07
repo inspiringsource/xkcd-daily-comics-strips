@@ -27,7 +27,7 @@ export default function Home({data}) {
           xkcd Daily Comic Strip
         </h1>
 
-          {/* {console.log(data)} */}
+          {console.log(data)}
         <ul className={styles.grid}>
         
             <li key="id" className={styles.card}>
