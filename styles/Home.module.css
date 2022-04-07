@@ -67,10 +67,17 @@
 
 .grid {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   max-width: 800px;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.grid img {
+  max-width: 100%;
 }
 
 .card {
@@ -82,7 +89,7 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  max-width: 610px;
 }
 
 .card:hover,
