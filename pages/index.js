@@ -24,15 +24,16 @@ export default function Home({data}) {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          xkcd Daily Comic Strip
+          xkcd Daily Update
         </h1>
+          {/* {console.log(data)} */}
 
-          {console.log(data)}
-        <ul className={styles.grid}>
+          <ul className={styles.grid}>
         
             <li key="id" className={styles.card}>
-              <a href="">
-                <Image width="740" height="360" src={data.img} alt=""/>
+              <a href="https://xkcd.com/archive/">
+                
+                <Image src={data.img} width="100%" height="100%" layout="responsive" objectFit="contain" alt=""/>
                 <p style={{fontSize: 10, textAlign: 'center'}}>Date: {("0" + data.month).slice(-2)}-{("0" + data.day).slice(-2)}-{data.year}</p>
                 <p style={{fontSize: 10, textAlign: 'center'}}>Comic №: {data.num}</p>
                 <br/>
@@ -40,22 +41,14 @@ export default function Home({data}) {
               </a>
             </li>
           
-          
 
         </ul>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
+        <a href='https://xkcd.com/'>
+          <small>For more visit xkcd.com</small>
+          </a>
       </footer>
     </div>
   )
