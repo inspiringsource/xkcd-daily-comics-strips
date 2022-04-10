@@ -26,7 +26,9 @@ export default function Home({data}) {
         <h1 className={styles.title}>
           xkcd Daily Update
         </h1>
-          {/* {console.log(data)} */}
+        90DaysOfDevOps
+        90DaysOfDevOps
+          {console.log(data)}
 
           <ul className={styles.grid}>
         
