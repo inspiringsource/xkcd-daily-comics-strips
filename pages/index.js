@@ -26,16 +26,14 @@ export default function Home({data}) {
         <h1 className={styles.title}>
           xkcd Daily Update
         </h1>
-        90DaysOfDevOps
-        90DaysOfDevOps
           {console.log(data)}
 
           <ul className={styles.grid}>
         
             <li key="id" className={styles.card}>
               <a href="https://xkcd.com/archive/">
-                
-                <Image src={data.img} width="100%" height="100%" layout="responsive" objectFit="contain" alt=""/>
+                {/* check if image available with ternary operator */}
+                {data.img ? <Image src={data.img} width="100%" height="100%" layout="responsive" objectFit="contain" alt=""/> : <Image src='https://u.cubeupload.com/avi2022/noimage.png' width="100%" height="100%" layout="responsive" objectFit="contain" alt=""/>}
                 <p style={{fontSize: 10, textAlign: 'center'}}>Date: {("0" + data.month).slice(-2)}-{("0" + data.day).slice(-2)}-{data.year}</p>
                 <p style={{fontSize: 10, textAlign: 'center'}}>Comic №: {data.num}</p>
                 <br/>
