@@ -3,12 +3,18 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 
 export async function getServerSideProps() {
-  // Fetch data from external API
-  const res = await fetch(`https://xkcd.com/info.0.json`)
-  const data = await res.json()
+  //try...catch statement to handle errors
+  try{
+    // Fetch data from API
+    const res = await fetch(`https://xkcd.com/info.0.json`)
+    const data = await res.json()
+    // Pass data to the page via props
+    return { props: { data } }
+  }
+  catch(err){
+    console.log(err)
+  }
 
-  // Pass data to the page via props
-  return { props: { data } }
 }
   
 
@@ -32,8 +38,10 @@ export default function Home({data}) {
         
             <li key="id" className={styles.card}>
               <a href="https://xkcd.com/archive/">
+                
                 {/* check if image available with ternary operator */}
                 {data.img ? <Image src={data.img} width="100%" height="100%" layout="responsive" objectFit="contain" alt=""/> : <Image src='https://u.cubeupload.com/avi2022/noimage.png' width="100%" height="100%" layout="responsive" objectFit="contain" alt=""/>}
+                
                 <p style={{fontSize: 10, textAlign: 'center'}}>Date: {("0" + data.month).slice(-2)}-{("0" + data.day).slice(-2)}-{data.year}</p>
                 <p style={{fontSize: 10, textAlign: 'center'}}>Comic №: {data.num}</p>
                 <br/>
@@ -46,7 +54,7 @@ export default function Home({data}) {
       </main>
 
       <footer className={styles.footer}>
-        <a href='https://xkcd.com/'>
+          <a href='https://xkcd.com/'>
           <small>For more visit xkcd.com</small>
           </a>
       </footer>

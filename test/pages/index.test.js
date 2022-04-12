@@ -1,8 +1,8 @@
 import React from 'react'
 import Home from '../../pages/index'
 
-test('the data is peanut butter', () => {
+test('xkcd', () => {
   return fetchData().then(data => {
-    expect(data).toBe('peanut butter');
+    expect(data).toBe('xkcd');
   });
 });
