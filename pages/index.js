@@ -37,7 +37,7 @@ export default function Home({data}) {
           <ul className={styles.grid}>
         
             <li key="id" className={styles.card}>
-              <a href="https://xkcd.com/archive/">
+              <a href="https://xkcd.com/">
                 
                 {/* check if image available with ternary operator */}
                 {data.img ? <Image src={data.img} width="100%" height="100%" layout="responsive" objectFit="contain" alt=""/> : <Image src='https://u.cubeupload.com/avi2022/noimage.png' width="100%" height="100%" layout="responsive" objectFit="contain" alt=""/>}
@@ -54,7 +54,7 @@ export default function Home({data}) {
       </main>
 
       <footer className={styles.footer}>
-          <a href='https://xkcd.com/'>
+          <a href='https://xkcd.com/archive/'>
           <small>For more visit xkcd.com</small>
           </a>
       </footer>
