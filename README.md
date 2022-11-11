@@ -1,10 +1,4 @@
-Hello internet!
-
-
-Implemeting CI/CD with GitHub Actions.
-Feel free to contribute and add new features.
-
-
+Fun 2 minute break to boost productivity :wink:
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
